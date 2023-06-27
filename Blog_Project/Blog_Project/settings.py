@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 
 from pathlib import Path
-
+from blogEnv import variables
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -125,11 +125,11 @@ SIMPLE_JWT = {
 
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'sandbox.smtp.mailtrap.io'
-EMAIL_PORT = 2525
-EMAIL_USE_TLS = True
-EMAIL_HOST_USER = 'daab53622981da'
-EMAIL_HOST_PASSWORD = 'e0ac26ed22af84'
+EMAIL_HOST = variables.EMAIL_HOST
+EMAIL_PORT = variables.EMAIL_PORT
+EMAIL_USE_TLS = variables.EMAIL_USE_TLS
+EMAIL_HOST_USER = variables.EMAIL_HOST_USER
+EMAIL_HOST_PASSWORD = variables.EMAIL_HOST_PASSWORD
 
 
 # Internationalization
